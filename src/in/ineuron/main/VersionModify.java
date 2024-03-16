@@ -44,6 +44,8 @@ public class VersionModify {
 			else {
 				transaction.rollback();
 			System.out.println("Object not modified");
+				HibernateUtil.closeSession(session);
+
 			}
 		}
 	}
